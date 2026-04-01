@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Feedback"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#4A65FF"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/diagSpokenText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sentence: I has a book"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/diagCorrectMark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correct: ❌"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/diagCorrection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correction: I have a book"
+            android:textColor="#D32F2F"
+            android:textStyle="italic"/>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#EEE" android:layout_marginVertical="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fluent Suggestion:"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/diagFluentSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I own a book"
+            android:textColor="#2E7D32"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:id="@+id/diagAccScore" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="72%" android:textStyle="bold" android:textColor="#4A65FF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Accuracy" android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:id="@+id/diagPronScore" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="80%" android:textStyle="bold" android:textColor="#4A65FF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pronun." android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:id="@+id/diagFluScore" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="75%" android:textStyle="bold" android:textColor="#4A65FF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fluency" android:textSize="10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCloseDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Continue Practice"
+            app:cornerRadius="12dp"
+            android:backgroundTint="#4A65FF"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvVocabWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4A65FF"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvVocabType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tvVocabWord"
+            android:layout_marginStart="8dp"
+            android:layout_alignBaseline="@id/tvVocabWord"
+            android:textColor="#888"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/btnSpeakVocab"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_play"
+            app:tint="#4A65FF" />
+
+        <TextView
+            android:id="@+id/tvVocabMeaning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvVocabWord"
+            android:layout_marginTop="8dp"
+            android:textColor="#444"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvVocabSynonym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvVocabMeaning"
+            android:layout_marginTop="8dp"
+            android:background="#E8F5E9"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:textColor="#2E7D32"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvVocabExample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvVocabSynonym"
+            android:layout_marginTop="12dp"
+            android:textColor="#777"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
